@@ -19,7 +19,7 @@ while True:
     signin_btn = driver.find_element_by_class_name('cta--form-submit.teal.js-dashboard-sign-in')
     signin_btn.click()
 
-    time.sleep(delay)
+    time.sleep(delay * 2) # it seems this page sometimes need more time.  increase the delay.
     driver.find_element_by_xpath('//*[@id="links"]/a[2]').click()
 
     time.sleep(delay)
