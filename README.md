@@ -37,6 +37,8 @@ $ cp config.json.template config.json
 }
 
 ```
+* adjust the webbot script
+Each script is highly customized to the latest state of the site page layout and the options provided.  XPath is used to identify the elements such as answers to your medical conditions to declare your elibility for a vaccine appointment.  You need to adjust the options by using `chrome > developer tool`, CTRL-F and type in the xpath element to locate the options picked and make adjustment for your own answer choice accordingly.  
 
 # Run
 Execute the corresponding health provider site webbot script, it will show the appointments and pause for the delay time * 10.   During the pause time, 
