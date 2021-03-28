@@ -1,0 +1,8 @@
+{
+    "sutter": {
+        "userid": "yourvalue",
+        "password": "yourvalue"
+    },
+    "chromeDriverPath": "yourpathtochromedriver",
+    "delay": 2
+}
