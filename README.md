@@ -20,6 +20,10 @@ $ pip3 install -r requirements.txt
 ```
 * download ChromeDriver with the version that matches your Chrome browser version
   * follow this link https://chromedriver.chromium.org/downloads
+  * For MacOS, remove quarantine for chromdriver
+  ```
+  xattr -d com.apple.quarantine /path/to/your/chromedriver
+  ```
 * prepare config.json
 ```
 $ cp config.json.template config.json
@@ -41,8 +45,8 @@ $ cp config.json.template config.json
 Each script is highly customized to the latest state of the site page layout and the options provided.  XPath is used to identify the elements such as answers to your medical conditions to declare your elibility for a vaccine appointment.  You need to adjust the options by using `chrome > developer tool`, CTRL-F and type in the xpath element to locate the options picked and make adjustment for your own answer choice accordingly.  
 
 # Run
-Execute the corresponding health provider site webbot script, it will show the appointments and pause for the delay time * 10.   During the pause time, 
-1. if the page shows appointments that you like, press CTRL-C in the terminal that runs the script to terminate and directly make the appoinment in the browser.
+Execute the corresponding health provider site webbot script, it will show the appointments and pause for the delay time * N, where N is hardcoded in the script and you can adjust if needed.   During the pause time, 
+1. if the page shows appointments that you like, press CTRL-C in the terminal that runs the script to terminate and directly make the appoinment in the browser.  Choose **Cancel** when the browser asks you to `cancel` or `Leave`
 2. if no appointment is shown or the appointments shown is not what you like, you can let the script to terminate the browser after the pause time expires and the whole process will start over again  infinitely.
 3. You can terminate the infinite loop in 2) by CTRL-C in the terminal running the script.  Remember to close the browser opened by the script. 
 ```

@@ -56,7 +56,7 @@ driver.find_element_by_xpath('//*[@id="scheduling-continue"]').click()
 
 # it should now show the appointment availability page
 while True:
-    time.sleep(delay * 6) # Change the factor here to allow enough time for appointments to load
+    time.sleep(delay * 4)
     driver.execute_script("window.scroll(0, 0);")
     time.sleep(1)
     driver.find_element_by_xpath('//*[@id="scheduling-workflow"]/div[1]/div/a[2]').click()
