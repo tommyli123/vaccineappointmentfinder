@@ -23,14 +23,13 @@ driver.find_element_by_xpath('//*[@id="links"]/a[2]').click()
 
 time.sleep(delay)
 driver.find_element_by_xpath('//*[@id="LQL_svU0KbYdMl9OVZBvT+uFDA==_1"]').click()
-driver.find_element_by_xpath('//*[@id="LQL_EExHV2uxeb5PW7nmL1JnGg==_5"]').click()
-driver.find_element_by_xpath('//*[@id="next-step"]').click() # proceed to next page
+driver.find_element_by_xpath('//*[@id="questionform"]/div[2]/input').click()
 
-time.sleep(delay)
+# time.sleep(delay)
 # driver.find_element_by_xpath('//*[@id="LQL_g9n4TlB7VSMvVVmuCi5r/w==_10"]').click()
-driver.find_element_by_xpath('//*[@id="LQL_g9n4TlB7VSMvVVmuCi5r/w==_1"]').click()
-driver.find_element_by_xpath('//*[@id="LQL_0D02j4T9UiZWAcD6abv9YQ==_1"]').click()
-driver.find_element_by_xpath('//*[@id="next-step"]').click() # proceed to next page
+# driver.find_element_by_xpath('//*[@id="LQL_g9n4TlB7VSMvVVmuCi5r/w==_1"]').click()
+# driver.find_element_by_xpath('//*[@id="LQL_0D02j4T9UiZWAcD6abv9YQ==_1"]').click()
+# driver.find_element_by_xpath('//*[@id="next-step"]').click() # proceed to next page
 
 # skip following due to previous page choices
 #time.sleep(delay)
@@ -57,7 +56,7 @@ driver.find_element_by_xpath('//*[@id="scheduling-continue"]').click()
 
 # it should now show the appointment availability page
 while True:
-    time.sleep(delay * 10) # Change the factor here to allow enough time for appointments to load
+    time.sleep(delay * 6) # Change the factor here to allow enough time for appointments to load
     driver.execute_script("window.scroll(0, 0);")
     time.sleep(1)
     driver.find_element_by_xpath('//*[@id="scheduling-workflow"]/div[1]/div/a[2]').click()
