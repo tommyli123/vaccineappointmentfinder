@@ -21,7 +21,7 @@ signin_btn.click()
 time.sleep(delay * 2) # it seems this page sometimes need more time.  increase the delay.
 driver.find_element_by_xpath('//*[@id="links"]/a[2]').click()
 
-time.sleep(delay)
+time.sleep(delay * 2)
 driver.find_element_by_xpath('//*[@id="LQL_svU0KbYdMl9OVZBvT+uFDA==_1"]').click()
 driver.find_element_by_xpath('//*[@id="questionform"]/div[2]/input').click()
 
