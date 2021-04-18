@@ -30,8 +30,8 @@ $ pip3 install -r requirements.txt
 ```
 $ cp config.json.template config.json
 ```
-* pdate your credential and the chromeDriver path in config.json
-  * sutter section : provide your credential if you plan to use sutter vaccine registration
+* update your credential and the chromeDriver path in config.json
+  * **sutter section** : provide your credential if you plan to use sutter vaccine registration
 ```json
 {
     "sutter": {
