@@ -9,6 +9,8 @@ from selenium.webdriver.chrome.options import Options
 
 config = json.loads(open('config.json').read())
 delay = config['delay']
+zipcode = str(config['washington']['zipcode'])
+distance = config['washington']['distance']
 
 options = Options()
 options.add_argument('--headless')
@@ -16,7 +18,8 @@ while True:
     driver = webdriver.Chrome(config['chromeDriverPath'], options=options)  # Optional argument, if not specified will search path.
     # driver.set_window_size(1400, 800)
     driver.maximize_window()
-    driver.get('https://prepmod.doh.wa.gov/clinic/search?location=98105&search_radius=50+miles&q%5Bvenue_search_name_or_venue_name_i_cont%5D=&clinic_date_eq%5Byear%5D=&clinic_date_eq%5Bmonth%5D=&clinic_date_eq%5Bday%5D=&q%5Bvaccinations_name_i_cont%5D=&commit=Search#search_results')
+    url = f'https://prepmod.doh.wa.gov/clinic/search?location={zipcode}&search_radius={distance}+miles&q%5Bvenue_search_name_or_venue_name_i_cont%5D=&clinic_date_eq%5Byear%5D=&clinic_date_eq%5Bmonth%5D=&clinic_date_eq%5Bday%5D=&q%5Bvaccinations_name_i_cont%5D=&commit=Search#search_results'
+    driver.get(url)
     time.sleep(3) # Let the user actually see something!
     sites = driver.find_elements_by_class_name('justify-between')
     m = re.compile('^Available Appointments: ([0-9]+)$')
@@ -41,4 +44,8 @@ while True:
         print(f"No appointments available. Retry in {delay} seconds")
         print("=======================")
         time.sleep(delay)
+    else:
+        print(url)
+        print("=======================")
+
     driver.quit()

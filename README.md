@@ -32,11 +32,16 @@ $ cp config.json.template config.json
 ```
 * update your credential and the chromeDriver path in config.json
   * **sutter section** : provide your credential if you plan to use sutter vaccine registration
+  * **Washington section**: update your zip code, and the distance (25, 50, 100)
 ```json
 {
     "sutter": {
         "userid": "yourvalue",
         "password": "yourvalue"
+    },
+    "washington": {
+        "zipcode": 12345,
+        "distance": 50
     },
     "chromeDriverPath": "yourpathtochromedriver",
     "delay": 2
@@ -55,10 +60,14 @@ Execute the corresponding health provider site webbot script, it will show the a
 ```
 $ python sutter.py
 ```
-## Washington state
+## Washington state only
 Execute the corresponding script.  It will show vaccination sites and number of available appointments.  If there is no available appointments, it will wait and restart again after a brief delay.
 
 Press CTRL-C to terminate the script anytime.
+
+When you spot appointments of use, copy the Washington state vaccine locator displayed in the terminal to a browser and start registering and booking.
+
+
 ```
 $ python washington.py
 ```
@@ -70,6 +79,8 @@ Arlington Airport Covid-19 Vaccine Site on 04/19/2021
 4226 188th St NE, Arlington WA, 98223
 Clinic Hours : 09:00 am - 04:00 pm
 Available Appointments: 5
+=======================
+<Full search site url will be shown here if there is appointment availability>
 =======================
 ```
 
