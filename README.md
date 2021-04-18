@@ -62,3 +62,21 @@ Press CTRL-C to terminate the script anytime.
 ```
 $ python washington.py
 ```
+### Sample output with appointment available
+```
+=======================
+***** 2021-04-18 11:46:19.116458 *****
+Arlington Airport Covid-19 Vaccine Site on 04/19/2021
+4226 188th St NE, Arlington WA, 98223
+Clinic Hours : 09:00 am - 04:00 pm
+Available Appointments: 5
+=======================
+```
+
+### Sample output with no appointment available
+```
+=======================
+***** 2021-04-18 11:47:15.545097 *****
+No appointments available. Retry in 3 seconds
+=======================
+```
