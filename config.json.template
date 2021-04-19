@@ -3,6 +3,10 @@
         "userid": "yourvalue",
         "password": "yourvalue"
     },
+    "washington": {
+        "zipcode": 98105,
+        "distance": 50
+    },
     "chromeDriverPath": "yourpathtochromedriver",
     "delay": 2
 }
