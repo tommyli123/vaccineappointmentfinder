@@ -8,5 +8,13 @@
         "distance": 50
     },
     "chromeDriverPath": "yourpathtochromedriver",
-    "delay": 2
+    "delay": 2,
+    "sms": {
+        "enabled": true,
+        "number": "<yourPhoneNumber>@<yourTelcoMessageGateway"
+    },
+    "gmail": {
+        "userid": "yourGmailAddress",
+        "password": "yourGoogleAppPassword"
+    }
 }
