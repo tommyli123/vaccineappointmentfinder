@@ -33,6 +33,9 @@ $ cp config.json.template config.json
 * update your credential and the chromeDriver path in config.json
   * **sutter section** : provide your credential if you plan to use sutter vaccine registration
   * **Washington section**: update your zip code, and the distance (25, 50, 100)
+  * **sms and gmail section**: currently only applied to Washington.  
+    * For gmail app password, you can create one in google account.  
+    * example of sms number: 1234567890@txt.att.net
 ```json
 {
     "sutter": {
@@ -44,7 +47,15 @@ $ cp config.json.template config.json
         "distance": 50
     },
     "chromeDriverPath": "yourpathtochromedriver",
-    "delay": 2
+    "delay": 2,
+    "sms": {
+        "enabled": true,
+        "number": "<yourPhoneNumber>@<yourTelcoMessageGateway"
+    },
+    "gmail": {
+        "userid": "yourGmailAddress",
+        "password": "yourGoogleAppPassword"
+    }
 }
 
 ```
